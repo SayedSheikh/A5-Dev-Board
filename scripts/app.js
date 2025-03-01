@@ -21,7 +21,7 @@ for (let cardBtn of cardBtns) {
 
 
     if (!event.target.classList.contains('opacity-20')) {
-      // alert('Board Updated Successfully')
+      alert('Board Updated Successfully')
       event.target.classList.add('opacity-20');
 
       //updating the taskLeft number
@@ -62,7 +62,7 @@ for (let cardBtn of cardBtns) {
 
 
       if (taskLeft === 0) {
-        // alert('Congrats!!! You have completed all the tasks');
+        alert('Congrats!!! You have completed all the tasks');
       }
 
 
@@ -80,6 +80,23 @@ document.getElementById('dlt-btn').addEventListener('click', function () {
   for (let para of paras) {
     completedTasks.removeChild(para);
   }
+
+
+});
+
+
+document.getElementById('rainbow-btn').addEventListener('click', function () {
+
+  let colorStr = "0123456789ABCDEF";
+  let color = "#";
+
+  for (let i = 0; i < 6; i++) {
+    let randomIndex = Math.floor(Math.random() * 16);
+    color += colorStr[randomIndex];
+  }
+
+  document.body.style.backgroundColor = color;
+  document.getElementsByTagName('main')[0].style.backgroundColor = color;
 
 
 });
