@@ -84,9 +84,11 @@ document.getElementById('dlt-btn').addEventListener('click', function () {
 
 });
 
-
+let a = 0;
 document.getElementById('rainbow-btn').addEventListener('click', function () {
 
+  a += 30;
+  document.getElementById('rainbow-btn').style.transform = `rotate(${a}deg)`;
   let colorStr = "0123456789ABCDEF";
   let color = "#";
 
