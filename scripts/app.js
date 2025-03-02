@@ -9,7 +9,7 @@ const year = today.getFullYear().toString();
 const month = months[today.getMonth()];
 
 
-document.getElementById('today').innerText = days[today.getDay()];
+document.getElementById('today').innerText = days[today.getDay()] + ',';
 document.getElementById('todays-date').innerText = month + "  " + todaysDate + "  " + year;
 
 
@@ -59,7 +59,7 @@ for (let cardBtn of cardBtns) {
       div.appendChild(p);
 
 
-
+      // if all task completed it will show another alert....
 
       if (taskLeft === 0) {
         alert('Congrats!!! You have completed all the tasks');
@@ -100,3 +100,6 @@ document.getElementById('rainbow-btn').addEventListener('click', function () {
 
 
 });
+
+
+
